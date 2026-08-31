@@ -319,16 +319,16 @@
 }
 
 /* ─── Dividers ─── */
-.divider__0a0a0 {
+[class*="divider_"] {
   border-color: var(--border) !important;
 }
 
 /* ─── Sliders / Toggles ─── */
-.container__0a0a0 {
+[class*="sliderContainer_"] {
   background: var(--border) !important;
 }
 
-.container__0a0a0[style*="background"] {
+[class*="sliderContainer_"][style*="background"] {
   background: var(--primary) !important;
 }
 
@@ -344,7 +344,7 @@
 }
 
 /* ─── Friends List ─── */
-.peopleColumn__0a0a0 {
+[class*="peopleColumn_"] {
   background: transparent !important;
 }
 
@@ -374,16 +374,16 @@
 }
 
 /* ─── Voice States ─── */
-.voiceState__0a0a0 {
+[class*="voiceState_"] {
   color: var(--fg-dim) !important;
 }
 
-.voiceState__0a0a0:hover {
+[class*="voiceState_"]:hover {
   color: var(--fg) !important;
 }
 
 /* ─── Call / Video Chat ─── */
-.videoWrapper__0a0a0 {
+[class*="videoWrapper_"] {
   background: var(--bg) !important;
 }
 
@@ -392,12 +392,12 @@
 }
 
 /* ─── Activity / Game Status ─── */
-.activity__0a0a0 {
+[class*="activity_"] {
   color: var(--fg-dim) !important;
 }
 
 /* ─── Spotify Status in Discord ─── */
-.spotifySection__0a0a0 {
+[class*="spotifySection_"] {
   background: rgba(196, 168, 226, 0.06) !important;
   border: 1px solid var(--border) !important;
   border-radius: 10px !important;
@@ -433,7 +433,7 @@
 }
 
 /* ─── Forum / Channel Grid ─── */
-.forum__0a0a0 {
+[class*="forum_"] {
   background: transparent !important;
 }
 
