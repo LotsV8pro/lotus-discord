@@ -3,57 +3,73 @@
   <img src="https://img.shields.io/badge/Lotus_Purple-141218?style=for-the-badge&logo=codeforces&logoColor=C4A8E2"/>
 </p>
 
-<h1 align="center">◈ LOTUS DISCORD ◈</h1>
+<h1 align="center">Lotus Discord</h1>
 
-<p align="center">
-  <b>Purple Glassmorphism Theme for Vencord</b><br>
-  <sub>Dark purple glass · matching Lotus-Arch aesthetic</sub>
-</p>
+A purple glass theme for Discord, loaded through Vencord. It uses the same
+palette as the other Lotus repos: dark background, lavender accents, translucent
+panels.
 
-<p align="center">
-  <a href="#-install">Install</a> •
-  <a href="#-palette">Palette</a> •
-  <a href="#-themed">Themed</a> •
-  <a href="#-compatible">Compatible</a>
-</p>
+The palette is the same one used by
+[Lotus-Arch](https://github.com/LotsV8pro/Lotus-Arch), so a screenshot of
+Discord next to the desktop does not clash.
 
----
+## Install
 
-## ◈ Install
+Vencord reads user themes from `~/.config/Vencord/themes/`.
 
-1. Copy `themes/lotus-purple.theme.css` to `~/.config/Vencord/themes/`
-2. Enable in Vencord settings → Themes → toggle on **Lotus Purple**
+```bash
+mkdir -p ~/.config/Vencord/themes
+curl -fsSL https://raw.githubusercontent.com/LotsV8pro/lotus-discord/master/themes/lotus-purple.theme.css \
+  -o ~/.config/Vencord/themes/lotus-purple.theme.css
+```
 
-## ◈ Palette
+Then open Discord, go to Settings, Vencord, Themes, and enable `lotus-purple`.
 
-| Token | Hex | Sample |
-|---|---|---|
-| Primary Accent | `#C4A8E2` | <img src="https://placehold.co/16x16/C4A8E2/C4A8E2" width="16"/> |
-| Primary Dim | `#8C7AA6` | <img src="https://placehold.co/16x16/8C7AA6/8C7AA6" width="16"/> |
-| Primary Dark | `#383048` | <img src="https://placehold.co/16x16/383048/383048" width="16"/> |
-| Text | `#D8D0E8` | <img src="https://placehold.co/16x16/D8D0E8/D8D0E8" width="16"/> |
-| Text Dim | `#887898` | <img src="https://placehold.co/16x16/887898/887898" width="16"/> |
-| Background | `#141218` | <img src="https://placehold.co/16x16/141218/141218" width="16"/> |
-| Background Alt | `#1C1A22` | <img src="https://placehold.co/16x16/1C1A22/1C1A22" width="16"/> |
-| Background Light | `#282430` | <img src="https://placehold.co/16x16/282430/282430" width="16"/> |
+Vesktop uses the same Vencord plugin and the same folder.
 
-## ◈ Themed
+## What it changes
 
-- Sidebar, chat, members list, panels
-- Buttons, scrollbars, context menus, modals
-- Input fields, search bar, embeds, reactions
-- Mentions, code blocks, bot tags, tooltips
-- Call/voice UI, Spotify status, threads
-- Glass blur effects on top bars and panels
+- The window, sidebar, chat and member list get a translucent purple layer over
+  a blur of the background.
+- Buttons, inputs, search, embeds, reactions and code blocks follow the accent
+  and border colours.
+- Context menus, modals, tooltips and the call view are restyled.
+- Scrollbars get a thin accent thumb and a transparent track.
 
-## ◈ Compatible
+Class names in Discord change every few weeks. The selectors here match the
+stable part of the generated names (`[class*="base_"]`) instead of a full hash,
+so a Discord update usually does not break the theme.
 
-- Discord (via Vencord)
-- Vesktop (Vencord built-in)
+## Palette
 
----
+| Token | Hex |
+|---|---|
+| Accent | `#C4A8E2` |
+| Accent dim | `#8C7AA6` |
+| Accent dark | `#383048` |
+| Text | `#D8D0E8` |
+| Text dim | `#887898` |
+| Background | `#141218` |
+| Background alt | `#1C1A22` |
+| Background light | `#282430` |
 
-<p align="center">
-  <a href="https://github.com/LotsV8pro/Lotus-Arch"><img src="https://img.shields.io/badge/Lotus_Arch-141218?style=flat-square&logo=arch-linux&logoColor=C4A8E2"/></a>
-  <a href="https://github.com/LotsV8pro/lotus-spotify"><img src="https://img.shields.io/badge/Lotus_Spotify-141218?style=flat-square&logo=spotify&logoColor=C4A8E2"/></a>
-</p>
+The variables live at the top of `themes/lotus-purple.theme.css`. Changing them
+there changes the whole theme.
+
+## Compatibility
+
+- Discord with Vencord
+- Vesktop, which ships Vencord
+
+It does not work with BetterDiscord without renaming the file and adapting the
+metadata block.
+
+## Related repos
+
+- [lotus-spotify](https://github.com/LotsV8pro/lotus-spotify): the same palette for Spotify
+- [lotus-steam](https://github.com/LotsV8pro/lotus-steam): the same palette for Steam
+- [Lotus-Arch](https://github.com/LotsV8pro/Lotus-Arch): the desktop it matches
+
+## License
+
+MIT.
