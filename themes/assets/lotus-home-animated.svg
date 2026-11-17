@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <g transform="translate(64,86) scale(4.6)" fill="#C4A8E2">
+    <path id="petal" d="M0,0 C-5.4,-4 -4.3,-10.5 0,-13 C4.3,-10.5 5.4,-4 0,0 Z"/>
+
+    <!-- pétalo central: sale desde abajo (translate y) y escala -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 14;0 14;0 0;0 0;0 0;0 14"
+        keyTimes="0;0.10;0.34;0.72;1" dur="2.2s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0 0 1 1;0.25 0.8 0.25 1;0 0 1 1;0.4 0 0.8 1"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" values="0;0;1;1;1;0"
+          keyTimes="0;0.10;0.34;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"
+          calcMode="spline" keySplines="0 0 1 1;0.25 0.8 0.25 1;0 0 1 1;0 0 1 1;0.4 0 0.8 1"/>
+        <use href="#petal"/>
+      </g>
+    </g>
+
+    <!-- pétalos interiores: se abren después, a ritmo más lento -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0;0;-35;-35;-35;0"
+        keyTimes="0;0.24;0.52;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0 0 1 1;0.25 0.8 0.25 1;0 0 1 1;0 0 1 1;0.4 0 0.8 1"/>
+      <g opacity="0.72"><animate attributeName="opacity" values="0;0;0.72;0.72;0.72;0" keyTimes="0;0.24;0.52;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"/><use href="#petal"/></g>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0;0;35;35;35;0"
+        keyTimes="0;0.24;0.52;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0 0 1 1;0.25 0.8 0.25 1;0 0 1 1;0 0 1 1;0.4 0 0.8 1"/>
+      <g opacity="0.72"><animate attributeName="opacity" values="0;0;0.72;0.72;0.72;0" keyTimes="0;0.24;0.52;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"/><use href="#petal"/></g>
+    </g>
+
+    <!-- pétalos exteriores: último en abrirse -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0;0;-70;-70;-70;0"
+        keyTimes="0;0.34;0.64;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0 0 1 1;0.25 0.8 0.25 1;0 0 1 1;0 0 1 1;0.4 0 0.8 1"/>
+      <g opacity="0.48"><animate attributeName="opacity" values="0;0;0.48;0.48;0.48;0" keyTimes="0;0.34;0.64;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"/><use href="#petal"/></g>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0;0;70;70;70;0"
+        keyTimes="0;0.34;0.64;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0 0 1 1;0.25 0.8 0.25 1;0 0 1 1;0 0 1 1;0.4 0 0.8 1"/>
+      <g opacity="0.48"><animate attributeName="opacity" values="0;0;0.48;0.48;0.48;0" keyTimes="0;0.34;0.64;0.72;0.92;1" dur="2.2s" repeatCount="indefinite"/><use href="#petal"/></g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,211 @@
+/**
+ * @name Midnight (Caelestia)
+ * @description A dark, rounded discord theme. Caelestia scheme colours.
+ * @author refact0r, esme, anubis
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+body {
+  /* font options */
+  --font: "figtree"; /* change to '' for default discord font */
+  --code-font: "JetBrainsMono NF"; /* change to '' for default discord font */
+  font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
+  /* sizes */
+  --gap: 12px; /* spacing between panels */
+  --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+  --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+  /* animation/transition options */
+  --animations: on; /* turn off to disable all midnight animations/transitions */
+  --list-item-transition: 0.2s ease; /* transition for list items */
+  --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+  --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+  /* top bar options */
+  --top-bar-height: var(
+      --gap
+  ); /* height of the titlebar/top bar (discord default is 36px, 24px recommended if moving/hiding top bar buttons) */
+  --top-bar-button-position: titlebar; /* off: default position, hide: hide inbox/support buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to titlebar (will hide title) */
+  --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+  --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+  /* window controls */
+  --custom-window-controls: off; /* turn off to use discord default window controls */
+  --window-control-size: 14px; /* size of custom window controls */
+  /* dms button icon options */
+  --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+  --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%20%3Cg%20transform%3D%22translate%2864%2C86%29%20scale%284.6%29%22%20fill%3D%22%23C4A8E2%22%3E%20%3Cg%20transform%3D%22rotate%28-70%29%22%20opacity%3D%220.48%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%2870%29%22%20opacity%3D%220.48%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%28-35%29%22%20opacity%3D%220.72%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%2835%29%22%20opacity%3D%220.72%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fsvg%3E");
+  --dms-icon-svg-size: 100%; /* size of the svg (css mask-size) */
+  --dms-icon-color-before: #b388ff; /* normal icon color */
+  --dms-icon-color-after: #d0a8ff; /* icon color when button is hovered/selected */
+  /* dms button background options */
+  --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+  --dms-background-image-url: url(""); /* url of the background image */
+  --dms-background-image-size: cover; /* size of the background image (css background-size) */
+  --dms-background-color: linear-gradient(
+      70deg,
+      var(--blue-2),
+      var(--purple-2),
+      var(--red-2)
+  ); /* fixed color/gradient (css background) */
+  /* background image options */
+  --background-image: off; /* turn on to use a background image */
+  --background-image-url: url(""); /* url of the background image */
+  /* transparency/blur options */
+  /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+  --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
+  --remove-bg-layer: off; /* turn on to remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+  --panel-blur: off; /* turn on to blur the background of panels */
+  --blur-amount: 12px; /* amount of blur */
+  --bg-floating: #1a1530; /* you can set this to a more opaque color if floating panels look too transparent */
+  /* chatbar options */
+  --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
+  --chatbar-height: 47px; /* height of the chatbar (56px by default, 47px to align with user panel, 56px recommended for separated) */
+  /* other options */
+  --small-user-panel: off; /* off: default user panel, on: smaller user panel like in old discord */
+}
+
+/* color options */
+:root {
+  --colors: on; /* turn off to use discord default colors */
+  /* text colors */
+  --text-0: #2a2140; /* text on colored elements */
+  --text-1: #efe9f7; /* bright text on colored elements */
+  --text-2: #ded4ec; /* headings and important text */
+  --text-3: #cdc3df; /* normal text */
+  --text-4: #a99cbe; /* icon buttons and channels */
+  --text-5: #8f83a6; /* muted channels/chats and timestamps */
+  /* background and dark colors */
+  --bg-1: #3a3350; /* dark buttons when clicked */
+  --bg-2: #2e2840; /* dark buttons */
+  --bg-3: #171327; /* spacing, secondary elements */
+  --bg-4: #221b33; /* main background color */
+  --hover: rgba(196, 168, 226, 0.10); /* channels and buttons when hovered */
+  --active: rgba(196, 168, 226, 0.14); /* channels and buttons when clicked or selected */
+  --active-2: rgba(196, 168, 226, 0.22); /* extra state for transparent buttons */
+  --message-hover: rgba(196, 168, 226, 0.08); /* messages when hovered */
+  /* accent colors */
+  --accent-1: var(--purple-1); /* links and other accent text */
+  --accent-2: var(--purple-2); /* small accent elements */
+  --accent-3: var(--purple-3); /* accent buttons */
+  --accent-4: var(--purple-4); /* accent buttons when hovered */
+  --accent-5: var(--purple-5); /* accent buttons when clicked */
+  --accent-new: #f4a9d0; /* stuff that's normally red like mute/deafen buttons */
+  --mention: linear-gradient(
+      to right,
+      color-mix(in hsl, var(--blue-2), transparent 90%) 40%,
+      transparent
+  ); /* background of messages that mention you */
+  --mention-hover: linear-gradient(
+      to right,
+      color-mix(in hsl, var(--blue-2), transparent 95%) 40%,
+      transparent
+  ); /* background of messages that mention you when hovered */
+  --reply: linear-gradient(
+      to right,
+      color-mix(in hsl, var(--text-3), transparent 90%) 40%,
+      transparent
+  ); /* background of messages that reply to you */
+  --reply-hover: linear-gradient(
+      to right,
+      color-mix(in hsl, var(--text-3), transparent 95%) 40%,
+      transparent
+  ); /* background of messages that reply to you when hovered */
+  /* status indicator colors */
+  --online: var(--green-2); /* change to #43a25a for default */
+  --dnd: var(--red-2); /* change to #d83a42 for default */
+  --idle: var(--yellow-2); /* change to #ca9654 for default */
+  --streaming: var(--purple-2); /* change to #593695 for default */
+  --offline: var(--text-4); /* change to #83838b for default offline color */
+  /* border colors */
+  --border-light: rgba(196, 168, 226, 0); /* light border color */
+  --border: rgba(196, 168, 226, 0.22); /* normal border color */
+  --button-border: rgba(196, 168, 226, 0); /* neutral border color of buttons */
+  /* base colors */
+  --red-1: #ffb3d9;
+  --red-2: #f49ac4;
+  --red-3: #e87fb2;
+  --red-4: #dc66a0;
+  --red-5: #c94d8d;
+  --green-1: #c9f2e0;
+  --green-2: #9ee0c4;
+  --green-3: #7fcdaf;
+  --green-4: #63b99b;
+  --green-5: #4aa386;
+  --blue-1: #c2c1ff;
+  --blue-2: rgb(67.4358001265%, 66.9019607843%, 100%);
+  --blue-3: rgb(58.7931688805%, 58.1176470588%, 100%);
+  --blue-4: rgb(50.1505376344%, 49.3333333333%, 100%);
+  --blue-5: rgb(41.5079063884%, 40.5490196078%, 100%);
+  --yellow-1: #ffecf3;
+  --yellow-2: rgb(100%, 82.9215686275%, 89.213622291%);
+  --yellow-3: rgb(100%, 73.2941176471%, 83.133126935%);
+  --yellow-4: rgb(100%, 63.6666666667%, 77.0526315789%);
+  --yellow-5: rgb(100%, 54.0392156863%, 70.9721362229%);
+  --purple-1: #bfb8ff;
+  --purple-2: rgb(67.1427782381%, 63.5490196078%, 100%);
+  --purple-3: rgb(59.3835956918%, 54.9411764706%, 100%);
+  --purple-4: rgb(51.6244131455%, 46.3333333333%, 100%);
+  --purple-5: rgb(43.8652305993%, 37.7254901961%, 100%);
+}
+
+
+/* Lotus Home: fan-open on hover, slow, soft blue */
+.wrapper_JJ-hgR[data-list-item-id='guildsnav___home'] > .childWrapper_JJ-hgR::before {
+  width: 82% !important;
+  height: 82% !important;
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%20%3Cg%20transform%3D%22translate%2864%2C86%29%20scale%284.6%29%22%20fill%3D%22%23C4A8E2%22%3E%20%3Cg%20transform%3D%22rotate%28-70%29%22%20opacity%3D%220.48%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%2870%29%22%20opacity%3D%220.48%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%28-35%29%22%20opacity%3D%220.72%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%2835%29%22%20opacity%3D%220.72%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fsvg%3E") !important;
+  background: #c4a8e2 !important;
+  transform: none !important;
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out !important;
+}
+/* selected: static lotus, open, no animation */
+.wrapper_JJ-hgR[data-list-item-id='guildsnav___home'].selected_JJ-hgR > .childWrapper_JJ-hgR::before {
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%20%3Cg%20transform%3D%22translate%2864%2C86%29%20scale%284.6%29%22%20fill%3D%22%23C4A8E2%22%3E%20%3Cg%20transform%3D%22rotate%28-70%29%22%20opacity%3D%220.48%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%2870%29%22%20opacity%3D%220.48%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%28-35%29%22%20opacity%3D%220.72%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cg%20transform%3D%22rotate%2835%29%22%20opacity%3D%220.72%22%3E%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%3C%2Fg%3E%20%3Cpath%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fsvg%3E") !important;
+  background: #d4b8f0 !important;
+  transform: none !important;
+}
+/* hover ONLY: animated fan, no spin */
+.wrapper_JJ-hgR[data-list-item-id='guildsnav___home']:hover > .childWrapper_JJ-hgR::before {
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%20%3Cg%20transform%3D%22translate%2864%2C86%29%20scale%284.6%29%22%20fill%3D%22%23C4A8E2%22%3E%20%3Cpath%20id%3D%22petal%22%20d%3D%22M0%2C0%20C-5.4%2C-4%20-4.3%2C-10.5%200%2C-13%20C4.3%2C-10.5%205.4%2C-4%200%2C0%20Z%22%2F%3E%20%3C%21--%20p%C3%A9talo%20central%3A%20sale%20desde%20abajo%20%28translate%20y%29%20y%20escala%20--%3E%20%3Cg%3E%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22translate%22%20values%3D%220%2014%3B0%2014%3B0%200%3B0%200%3B0%200%3B0%2014%22%20keyTimes%3D%220%3B0.10%3B0.34%3B0.72%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%20calcMode%3D%22spline%22%20keySplines%3D%220%200%201%201%3B0.25%200.8%200.25%201%3B0%200%201%201%3B0.4%200%200.8%201%22%2F%3E%20%3Cg%3E%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22scale%22%20values%3D%220%3B0%3B1%3B1%3B1%3B0%22%20keyTimes%3D%220%3B0.10%3B0.34%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%20calcMode%3D%22spline%22%20keySplines%3D%220%200%201%201%3B0.25%200.8%200.25%201%3B0%200%201%201%3B0%200%201%201%3B0.4%200%200.8%201%22%2F%3E%20%3Cuse%20href%3D%22%23petal%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fg%3E%20%3C%21--%20p%C3%A9talos%20interiores%3A%20se%20abren%20despu%C3%A9s%2C%20a%20ritmo%20m%C3%A1s%20lento%20--%3E%20%3Cg%3E%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20values%3D%220%3B0%3B-35%3B-35%3B-35%3B0%22%20keyTimes%3D%220%3B0.24%3B0.52%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%20calcMode%3D%22spline%22%20keySplines%3D%220%200%201%201%3B0.25%200.8%200.25%201%3B0%200%201%201%3B0%200%201%201%3B0.4%200%200.8%201%22%2F%3E%20%3Cg%20opacity%3D%220.72%22%3E%3Canimate%20attributeName%3D%22opacity%22%20values%3D%220%3B0%3B0.72%3B0.72%3B0.72%3B0%22%20keyTimes%3D%220%3B0.24%3B0.52%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%2F%3E%3Cuse%20href%3D%22%23petal%22%2F%3E%3C%2Fg%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20values%3D%220%3B0%3B35%3B35%3B35%3B0%22%20keyTimes%3D%220%3B0.24%3B0.52%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%20calcMode%3D%22spline%22%20keySplines%3D%220%200%201%201%3B0.25%200.8%200.25%201%3B0%200%201%201%3B0%200%201%201%3B0.4%200%200.8%201%22%2F%3E%20%3Cg%20opacity%3D%220.72%22%3E%3Canimate%20attributeName%3D%22opacity%22%20values%3D%220%3B0%3B0.72%3B0.72%3B0.72%3B0%22%20keyTimes%3D%220%3B0.24%3B0.52%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%2F%3E%3Cuse%20href%3D%22%23petal%22%2F%3E%3C%2Fg%3E%20%3C%2Fg%3E%20%3C%21--%20p%C3%A9talos%20exteriores%3A%20%C3%BAltimo%20en%20abrirse%20--%3E%20%3Cg%3E%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20values%3D%220%3B0%3B-70%3B-70%3B-70%3B0%22%20keyTimes%3D%220%3B0.34%3B0.64%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%20calcMode%3D%22spline%22%20keySplines%3D%220%200%201%201%3B0.25%200.8%200.25%201%3B0%200%201%201%3B0%200%201%201%3B0.4%200%200.8%201%22%2F%3E%20%3Cg%20opacity%3D%220.48%22%3E%3Canimate%20attributeName%3D%22opacity%22%20values%3D%220%3B0%3B0.48%3B0.48%3B0.48%3B0%22%20keyTimes%3D%220%3B0.34%3B0.64%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%2F%3E%3Cuse%20href%3D%22%23petal%22%2F%3E%3C%2Fg%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20values%3D%220%3B0%3B70%3B70%3B70%3B0%22%20keyTimes%3D%220%3B0.34%3B0.64%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%20calcMode%3D%22spline%22%20keySplines%3D%220%200%201%201%3B0.25%200.8%200.25%201%3B0%200%201%201%3B0%200%201%201%3B0.4%200%200.8%201%22%2F%3E%20%3Cg%20opacity%3D%220.48%22%3E%3Canimate%20attributeName%3D%22opacity%22%20values%3D%220%3B0%3B0.48%3B0.48%3B0.48%3B0%22%20keyTimes%3D%220%3B0.34%3B0.64%3B0.72%3B0.92%3B1%22%20dur%3D%222.2s%22%20repeatCount%3D%22indefinite%22%2F%3E%3Cuse%20href%3D%22%23petal%22%2F%3E%3C%2Fg%3E%20%3C%2Fg%3E%20%3C%2Fg%3E%20%3C%2Fsvg%3E") !important;
+  background: #dcc0ff !important;
+  transform: scale(1.1) !important;
+}
+
+
+/* Lotus Home button background: soft violet instead of default blue */
+.wrapper_JJ-hgR[data-list-item-id='guildsnav___home'] > .childWrapper_JJ-hgR {
+  background: rgba(196, 168, 226, 0.12) !important;
+  transition: background 0.2s ease-out !important;
+}
+.wrapper_JJ-hgR[data-list-item-id='guildsnav___home']:hover > .childWrapper_JJ-hgR,
+.wrapper_JJ-hgR[data-list-item-id='guildsnav___home'].selected_JJ-hgR > .childWrapper_JJ-hgR {
+  background: rgba(196, 168, 226, 0.22) !important;
+}
+
+
+/* No background when selected: guilds, favorites, channels, settings tabs.
+   Hover keeps a subtle tint so the pointer still reads. */
+.wrapper_JJ-hgR.selected_JJ-hgR > .childWrapper_JJ-hgR,
+.wrapper_JJ-hgR.selected_JJ-hgR > .childWrapper_JJ-hgR > svg,
+.guilds_pog62O [data-list-item-id].selected_JJ-hgR .childWrapper_JJ-hgR,
+.childWrapper_JJ-hgR.selected_JJ-hgR,
+.side_6zZYhF .item_6zZYhF.selected_6zZYhF,
+.wrapper_TNyK-N .link_TNyK-N.selected_TNyK-N,
+.channel_zln_tS.selected_zln_tS {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+/* keep the loto ink on the Home tile when selected (mask fill is the icon) */
+.wrapper_JJ-hgR[data-list-item-id='guildsnav___home'].selected_JJ-hgR > .childWrapper_JJ-hgR::before {
+  background: #d4b8f0 !important;
+}
+
+
+/* Hide Discord window controls (minimize/maximize/close) - niri handles them */
+.winButtons_3zSH5d,
+.winButton_3zSH5d {
+  display: none !important;
+}

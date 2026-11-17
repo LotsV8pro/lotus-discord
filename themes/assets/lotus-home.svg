@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <g transform="translate(64,86) scale(4.6)" fill="#C4A8E2">
+    <g transform="rotate(-70)" opacity="0.48"><path d="M0,0 C-5.4,-4 -4.3,-10.5 0,-13 C4.3,-10.5 5.4,-4 0,0 Z"/></g>
+    <g transform="rotate(70)" opacity="0.48"><path d="M0,0 C-5.4,-4 -4.3,-10.5 0,-13 C4.3,-10.5 5.4,-4 0,0 Z"/></g>
+    <g transform="rotate(-35)" opacity="0.72"><path d="M0,0 C-5.4,-4 -4.3,-10.5 0,-13 C4.3,-10.5 5.4,-4 0,0 Z"/></g>
+    <g transform="rotate(35)" opacity="0.72"><path d="M0,0 C-5.4,-4 -4.3,-10.5 0,-13 C4.3,-10.5 5.4,-4 0,0 Z"/></g>
+    <path d="M0,0 C-5.4,-4 -4.3,-10.5 0,-13 C4.3,-10.5 5.4,-4 0,0 Z"/>
+  </g>
+</svg>
